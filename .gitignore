@@ -120,3 +120,5 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 fakedb.py 
+"static/" 
+static/ 
