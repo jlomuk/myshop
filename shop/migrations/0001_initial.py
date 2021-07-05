@@ -2,6 +2,7 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
+import parler
 
 
 class Migration(migrations.Migration):
@@ -24,6 +25,7 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'categories',
                 'ordering': ('name',),
             },
+            bases=(parler.models.TranslatableModelMixin, models.Model),
         ),
         migrations.CreateModel(
             name='Product',
@@ -43,5 +45,6 @@ class Migration(migrations.Migration):
                 'ordering': ('name',),
                 'index_together': {('id', 'slug')},
             },
+            bases=(parler.models.TranslatableModelMixin, models.Model),
         ),
     ]
